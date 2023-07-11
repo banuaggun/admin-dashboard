@@ -1,5 +1,8 @@
-@import url('../scss/abstracts/_mixins.scss');
-@import url('../scss/abstracts/_variables.scss');
+//@import url('../scss/abstracts/_mixins.scss');
+//@import url('../scss/abstracts/_variables.scss');
+
+@import '../scss/abstracts/_mixins';
+@import '../scss/abstracts/_variables';
 
 .main {
     padding-left: $sidebar-width;
@@ -18,7 +21,7 @@
         @include tablet {
             padding: $mobileSpacing;
             position: relative;
-            background-color: $bodyBg;
+            background-color: $body-bg;
             z-index: 100;
         }
     }
