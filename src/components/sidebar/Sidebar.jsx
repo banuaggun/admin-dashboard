@@ -13,7 +13,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className='sidebar__logo'>
-        <img src={logo} alt="logo" style={{width:'40px', height:'40px'}}/>
+        <img src={logo} alt="logo" />
         <div className='sidebar__close'>
           <i className='ph ph-x-circle'></i>
         </div>
