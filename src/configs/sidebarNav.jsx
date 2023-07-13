@@ -8,31 +8,31 @@ const sidebarNav = [
   {
       link: '/orders',
       section: 'orders',
-      icon: <i className='bx bx-receipt' ></i>,
+      icon: <i className='ph-thin ph-newspaper' ></i>,
       text: 'Orders'
   },
   {
       link: '/products',
       section: 'products',
-      icon: <i className='bx bx-cube'></i>,
+      icon: <i className='ph-thin ph-cube'></i>,
       text: 'Products'
   },
   {
       link: '/customers',
       section: 'customers',
-      icon: <i className='bx bx-user'></i>,
+      icon: <i className='ph-thin ph-users-three'></i>,
       text: 'Customers'
   },
   {
       link: '/stats',
       section: 'stats',
-      icon: <i className='bx bx-line-chart'></i>,
+      icon: <i className='ph-thin ph-chart-line'></i>,
       text: 'Stats'
   },
   {
       link: '/settings',
       section: 'settings',
-      icon: <i className='bx bx-cog'></i>,
+      icon: <i className='ph-thin ph-gear'></i>,
       text: 'Settings'
   }
 ]

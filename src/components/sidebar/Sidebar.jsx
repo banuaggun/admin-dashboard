@@ -3,7 +3,7 @@ import './sidebar.scss'
 //import {images} from '../../constants/images.js'
 import logo from '../../assets/images/logo.jpg'
 import sidebarNav from '../../configs/sidebarNav'
-import { Heart, Cube, Circle } from 'phosphor-react'
+import { Link } from 'react-router-dom'
 
 
 
@@ -13,15 +13,31 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className='sidebar__logo'>
-        <img src={logo} alt="logo" style={{width:'120px', height:'120px'}}/>
-        <br/><br/><br/>
-        <Heart color="#AE2983" weight="fill" size={32} />
-      <Cube color="teal" weight="duotone" />
-      <Circle color="gray" weight="thin" size={28}/>
-      <i className="ph-thin ph-airplane"></i>
+        <img src={logo} alt="logo" style={{width:'40px', height:'40px'}}/>
         <div className='sidebar__close'>
           <i className='ph ph-x-circle'></i>
-          sidebar
+        </div>
+      </div>
+      <div className="sidebar__menu">
+        {
+          sidebarNav.map((nav, index) => (
+            <Link to={nav.link} key={`nav-${index}`} className={`sidebar__menu__item ${activeIndex === index && 'active'}`}>
+              <div className='sidebar__menu__item__icon'>
+                {nav.icon}
+              </div>
+              <div className="sidebar__menu__item__text">
+                {nav.text}
+              </div>
+            </Link>
+          ))
+        }
+        <div className="sidebar__menu__item">
+          <div className="sidebar__menu__item__icon">
+            <i className='ph-thin ph-sign-out'></i>
+          </div>
+          <div className="sidebar__menu__item__text">
+            Logout
+          </div>
         </div>
       </div>
     </div>
