@@ -1,15 +1,23 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './sidebar.scss'
 //import {images} from '../../constants/images.js'
 import logo from '../../assets/images/logo.jpg'
 import sidebarNav from '../../configs/sidebarNav'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 
 
 const Sidebar = () => {
   const [activeIndex, setActiveIndex] = useState(0)
+  const location = useLocation()
+
+  useEffect(() => {
+    const curPath = window.location.pathname.split('/')[1]
+    const activeItem = sidebarNav.findIndex(item => item.section === curPath)
+    setActiveIndex(curPath.length === 0 ? 0 : activeIndex)
+  }, [location])
+  
   return (
     <div className="sidebar">
       <div className='sidebar__logo'>

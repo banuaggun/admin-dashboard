@@ -18,6 +18,7 @@
   &__logo{
     @include flex();
     height:$sidebar-logo-height;
+    border:1px solid green;
 
     img{
       --size:55px;
@@ -44,7 +45,7 @@
     &__item{
       @include flex(center, flex-start);
       position: relative;
-      margin-bottom: 2rem;
+      margin-bottom: 0.8rem;
       padding-left: 20%;
       transition: color 0.3s ease-in-out;
 
