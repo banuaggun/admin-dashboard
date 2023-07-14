@@ -46,7 +46,7 @@
       @include flex(center, flex-start);
       position: relative;
       margin-bottom: 0.8rem;
-      padding-left: 20%;
+      padding-left: 10%;
       transition: color 0.3s ease-in-out;
 
       &:hover{
@@ -74,7 +74,7 @@
         --size:40px;
         width:var(--size);
         height:var(--size);
-        margin-right: 3rem;
+        margin-right: 1rem;
         @include flex(center, center);
         
         i{
