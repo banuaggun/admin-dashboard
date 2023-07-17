@@ -1,2 +1,21 @@
-@import '../../scss/abstracts/_variables';
 @import '../../scss/abstracts/_mixins';
+@import '../../scss/abstracts/_variables';
+
+
+.user__info{
+  position: relative;
+  @include flex(center, space-between);
+  height: 50px;
+  border:1px solid blue;
+
+  &__img{
+    --size:50px;
+    width:var(--size);
+    height: var(--size);
+    border-radius: 20%;
+
+    img{
+      border-radius: 20%;
+    }
+  }
+}

@@ -3,22 +3,35 @@
 
 .topnav{
   @include flex(center, space-between);
+  position: absolute;
+  margin-top: 20px;
   margin-bottom:$spacing;
+  width:calc(100% - $sidebar-width);
+  margin-left:$sidebar-width;
+  height: 50px;
+  padding:20px;
+  border:1px solid green;
+  z-index:100;
+
+  &__sidebar__toggle{
+    --size:40px;
+    width:var(--size);
+    height: var(--size);
+    @include flex(center, center);
+    cursor: pointer;
+
+    i{
+      font-size: 2rem;
+      color:red;
+    }
+  }
+
+  &__user{
+    @include flex(center, center);
+    background-color: aqua;
+  }
 
   @include tablet{
     margin-bottom:$mobileSpacing;
-  }
-}
-
-.sidebar__toggle{
-  --size:40px;
-  width:var(--size);
-  height: var(--size);
-  @include flex(center, center);
-  cursor: pointer;
-
-  i{
-    font-size:2rem;
-    color:purple;
   }
 }

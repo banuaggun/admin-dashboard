@@ -6,10 +6,12 @@ import './topnav.scss'
 const Topnav = () => {
   return (
     <div className='topnav'>
-      <div className="sidebar__toggle">
+      <div className="topnav__sidebar__toggle">
         <i className='ph-thin ph-text-outdent'></i>
       </div>
+      <div className="topnav__user">
       <Userinfo user={data.user} />
+      </div>
     </div>
   )
 }
