@@ -5,17 +5,31 @@
 .user__info{
   position: relative;
   @include flex(center, space-between);
-  height: 50px;
+  height: 60px;
   border:1px solid blue;
 
   &__img{
+    border:1px solid green;
     --size:50px;
     width:var(--size);
     height: var(--size);
-    border-radius: 20%;
+    border-radius: $border-radius;
 
     img{
-      border-radius: 20%;
+      --size:50px;
+      width:var(--size);
+      height: var(--size);
+      border-radius: $border-radius;
+    }
+  }
+
+  &__name{
+    padding:0 $spacing 0 20px;
+    font-size:$font-size-medium;
+    font-weight: 700;
+
+    @include tablet{
+      padding:0 $mobile-spacing;
     }
   }
 }

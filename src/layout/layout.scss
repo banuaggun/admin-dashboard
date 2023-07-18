@@ -16,11 +16,11 @@
     &__content {
         min-height: 100vh;
         padding: 20px;
-        margin-top: 40px;
+        margin-top: 80px;
         transition: all 0.5s ease-in-out;
 
         @include tablet {
-            padding: $mobileSpacing;
+            padding: $mobile-spacing;
             position: relative;
             background-color: $body-bg;
             z-index: 100;
