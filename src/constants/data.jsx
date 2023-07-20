@@ -3,7 +3,8 @@
 
 const data = {
   user:{
-    name:'Jane'
+    name:'Jane',
+    icon:<i className="ph-thin ph-caret-circle-down"></i>
   }
 }
 

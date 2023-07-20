@@ -1,0 +1,23 @@
+@import '../../scss/abstracts/_variables';
+@import '../../scss/abstracts/_mixins';
+
+.dashboard__wrapper{
+  @include flex(stretch);
+
+  &__main{
+    flex-grow:1;
+    padding-right:$sidebar-width;
+  }
+
+  &__right{
+    width:$sidebar-width;
+    background-color: $main-bg;
+    height:100vh;
+    padding:$spacing;
+    border-top-left-radius:$border-radius;
+    border-bottom-left-radius: $border-radius;
+    position: fixed;
+    top:60px;
+    right:0;
+  }
+}

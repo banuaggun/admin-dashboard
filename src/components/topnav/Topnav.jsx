@@ -1,6 +1,6 @@
 import React from 'react'
 import Userinfo from '../user-info/Userinfo'
-import data from '../../constants/data.js'
+import data from '../../constants/data.jsx'
 import './topnav.scss'
 
 const Topnav = () => {

@@ -4,19 +4,20 @@
 
 .user__info{
   position: relative;
-  @include flex(center, space-between);
+  @include flex(center, center);
   height: 60px;
   border:1px solid blue;
 
   &__img{
     border:1px solid green;
-    --size:50px;
+    --size:40px;
     width:var(--size);
     height: var(--size);
     border-radius: $border-radius;
+    margin-right:4px;
 
     img{
-      --size:50px;
+      --size:40px;
       width:var(--size);
       height: var(--size);
       border-radius: $border-radius;
@@ -24,12 +25,23 @@
   }
 
   &__name{
-    padding:0 $spacing 0 20px;
     font-size:$font-size-medium;
     font-weight: 700;
 
     @include tablet{
       padding:0 $mobile-spacing;
+    }
+  }
+
+  &__icon{
+    @include flex(center, center);
+    padding:0;
+    --size:40px;
+    width:var(--size);
+    height:var(--size);
+    span > i{
+      font-size: 2rem;
+      @include flex(center, center);
     }
   }
 }
