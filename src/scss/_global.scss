@@ -1,3 +1,5 @@
+@import './abstracts/_variables';
+@import './abstracts/_mixins';
 *{
   margin:0;
   padding:0;
@@ -23,4 +25,12 @@ img{
 
 ul, li{
   list-style: none;
+}
+
+.mb{
+  margin-bottom:$spacing;
+
+  @include tablet{
+    margin-bottom:$mobile-spacing;
+  }
 }

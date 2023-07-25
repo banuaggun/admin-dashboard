@@ -1,0 +1,22 @@
+@import '../../scss/abstracts/_variables';
+@import '../../scss/abstracts/_mixins';
+
+.stats{
+  padding:20px 30px;
+  border-radius: $border-radius;
+  background-color: $main-bg;
+  box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  &-blue{
+    background-color: $blue;
+    color:$white;
+  }
+
+  &-fullHeight{
+    height:calc(100% - $spacing);
+
+    @include tablet{
+      height:calc(100% - $mobile-spacing);
+    }
+  }
+}
