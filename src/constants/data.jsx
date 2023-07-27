@@ -1,37 +1,36 @@
-//import images from './images'
-//import logo from '../assets/images/logo.jpg'
+import images from "./images"
 
 const data = {
-  user:{
-    name:'Jane',
-    icon:<i className="ph-thin ph-caret-circle-down"></i>
-  },
-  summary:{
-    {
-      tittle:'Sales',
-      subtitle:'Total Sales Today',
-      value:'$1.800',
-      percent:70
+    user: {
+        name: 'Jane',
+        img: images.logo
     },
-    [
-      tittle='Sales',
-      subtitle='Total Sales Today',
-      value='$1.800',
-      percent=70
-    ],
-    [
-      tittle='Sales',
-      subtitle='Total Sales Today',
-      value='$1.800',
-      percent=70
-    ],
-    [
-      tittle='Sales',
-      subtitle='Total Sales Today',
-      value='$1.800',
-      percent=70
+    summary: [
+        {
+            title: 'Sales',
+            subtitle: 'Total sales today',
+            value: '$1.000',
+            percent: 70
+        },
+        {
+            title: 'Orders',
+            subtitle: 'Total orders today',
+            value: '3000',
+            percent: 49
+        },
+        {
+            title: 'Revenue',
+            subtitle: 'Total revenue today',
+            value: '$678',
+            percent: 38
+        },
+        {
+            title: 'Visits',
+            subtitle: 'Total visits today',
+            value: '2345',
+            percent: 55
+        }
     ]
-  }
 }
 
-export default data;
+export default data

@@ -3,7 +3,7 @@ import './summarystats.scss'
 
 const SummaryStats = ({item}) => {
   return (
-    <div>{itemt.title}</div>
+    <div>{item.title}</div>
   )
 }
 
