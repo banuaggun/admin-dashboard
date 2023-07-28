@@ -1,5 +1,6 @@
 import React from 'react'
-import DashboardWrapper, { DashboardWrapperMain, DashboardWrapperRight } from '../components/dashboard-wrapper/DashboardWrapper'
+import '../scss/_flexgrid.scss';
+import DashboardWrapper, { DashboardWrapperMain, DashboardWrapperRight } from '../components/dashboard-wrapper/DashboardWrapper';
 import Stats from '../components/stats/Stats';
 import SummaryStats from '../components/summary-stats/SummaryStats';
 import data from '../constants/data';

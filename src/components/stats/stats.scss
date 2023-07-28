@@ -3,9 +3,9 @@
 
 .stats{
   padding:20px 30px;
-  border-radius: $border-radius;
+  border-radius:10px;
   background-color: $main-bg;
-  box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow:rgba(149, 157, 165, 0.6) 0px 8px 24px;
 
   &-blue{
     background-color: $blue;
