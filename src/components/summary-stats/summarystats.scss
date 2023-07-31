@@ -2,26 +2,24 @@
 @import '../../scss/abstracts/_mixins';
 
 .summary__stats{
+  width:max-content;
+  align-items:center;
   @include flex(stretch, flex-start);
-
-  &__chart{
-    width:40%;
-
-    &__value{
-      margin-top:-30%;
-      font-weight:700;
-    }
-  }
-
+  flex-direction:row;
+  
   &__info{
     width:60%;
-    @include flex(start, space-between);
-    flex-direction:column;
+    min-width:max-content;
+    @include flex(start, flex-start);
+    flex-direction: column;
+    flex-wrap:wrap;
+    border:1px solid blue;
 
     &__title{
       font-size:$font-size-medium;
       font-weight:700;
       line-height:1.2;
+      width:max-content;
 
       span{
         font-size:13px;
@@ -33,6 +31,22 @@
       font-weight:700;
       font-size:$font-size-large;
       color:$black;
+    }
+  }
+
+  &__chart{
+    width:40%;
+    max-width:max-content;
+    border:1px solid red;
+
+    &__area{
+      width:80px;
+      height:80px;
+      border:1px solid purple;
+    }
+    &__value{
+      margin-top:-30%;
+      font-weight:700;
     }
   }
 }

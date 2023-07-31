@@ -2,7 +2,10 @@
 @import '../../scss/abstracts/_mixins';
 
 .stats{
-  padding:20px 30px;
+  
+  border:1px solid green;
+  min-width:max-content;
+  padding:20px 30px !important;
   border-radius:10px;
   background-color: $main-bg;
   box-shadow:rgba(149, 157, 165, 0.6) 0px 8px 24px;
