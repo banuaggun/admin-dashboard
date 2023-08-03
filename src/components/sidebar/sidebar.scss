@@ -2,23 +2,34 @@
 @import '../../scss/abstracts/_mixins';
 @import '../../scss/abstracts/_variables';
 
-
-
 .sidebar{
   @include flex(stretch, flex-start);
   flex-direction: column;
-  color:purple;
-  background-color:lightcyan;
+  color:$text-color;
+  background-color:$main-bg;
   width:$sidebar-width;
   height:100vh;
   position: fixed;
   top:0;
   z-index:100;
 
+  @include tablet{
+    width:10vw;
+    background-color: $main-color;
+    color:$white;
+    z-index:1;
+  }
+
   &__logo{
     @include flex();
     height:$sidebar-logo-height;
-    border:1px solid green;
+
+    @include tablet{
+      justify-content: space-between;
+      height:math.div($sidebar-logo-height, 1.8);
+      padding:0 $mobile-spacing;
+      margin-bottom: $mobile-spacing;
+    }
 
     img{
       --size:55px;
@@ -45,17 +56,29 @@
     &__item{
       @include flex(center, flex-start);
       position: relative;
-      margin-bottom: 0.8rem;
+      margin-bottom: 2rem;
       padding-left: 10%;
       transition: color 0.3s ease-in-out;
 
+      @include tablet {
+        padding-left: $mobile-spacing;
+      }
+
       &:hover{
-        color:lime;
+        color:$main-color;
+
+        @include tablet{
+          color:$orange;
+        }
       }
 
       &.active{
         font-weight:700;
-        color:teal;
+        color:$main-color;
+
+        @include tablet{
+          color:$orange;
+        }
 
         &::before{
           content:'';
@@ -64,9 +87,13 @@
           width:5px;
           left:0;
           top:0;
-          background-color: olivedrab;
+          background-color: $main-color;
           border-top-right-radius: 20px;
           border-bottom-right-radius: 20px;
+
+          @include tablet{
+            background-color: $orange;
+          }
         }
       }
 
@@ -74,8 +101,12 @@
         --size:40px;
         width:var(--size);
         height:var(--size);
-        margin-right: 1rem;
+        margin-right: 3rem;
         @include flex(center, center);
+
+        @include tablet{
+          margin-right:1rem;
+        }
         
         i{
           font-size: 1.9rem;

@@ -3,25 +3,12 @@
 
 .topnav{
   @include flex(center, space-between);
-  position: absolute;
   margin-bottom:$spacing;
-  width:calc(100% - $sidebar-width);
-  margin-left:$sidebar-width;
-  height: 60px;
-  padding:40px 20px;
-  border:1px solid green;
-  z-index:100;
-
   
-
-  &__user{
-    @include flex(center, center);
-    background-color: aqua;
-  }
-
   @include tablet{
-    margin-bottom:$mobile-spacing;
+    margin-bottom: $mobile-spacing;
   }
+  
 }
 
 .sidebar__toggle{
@@ -30,15 +17,13 @@
   height: var(--size);
   @include flex(center, center);
   cursor: pointer;
-  visibility: hidden;
 
   @include tablet{
     @include flex(center, center);
-    visibility: visible;
   }
 
   i{
-    font-size: 2rem;
-    color:red;
+    font-size: 3rem;
+    color:$main-color;
   }
 }

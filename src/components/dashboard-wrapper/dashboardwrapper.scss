@@ -1,12 +1,21 @@
 @import '../../scss/abstracts/_variables';
 @import '../../scss/abstracts/_mixins';
 
+
 .dashboard__wrapper{
   @include flex(stretch);
+  @include tablet{
+    flex-direction: column;
+  }
+ 
 
   &__main{
     flex-grow:1;
     padding-right:$sidebar-width;
+
+    @include tablet{
+      padding-right:0;
+    }
   }
 
   &__right{
@@ -14,10 +23,19 @@
     background-color: $main-bg;
     height:100vh;
     padding:$spacing;
-    border-top-left-radius:$border-radius;
-    border-bottom-left-radius: $border-radius;
-    position: fixed;
-    top:60px;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius:$border-radius;
+    position:fixed;
     right:0;
+    top:0;
+
+    @include tablet{
+      position: relative;
+      padding: $mobile-spacing;
+      margin-top:$mobile-spacing;
+      border-radius: $border-radius;
+      width:100%;
+      height:max-content;
+    }
   }
 }
