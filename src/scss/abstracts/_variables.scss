@@ -1,20 +1,27 @@
 $body-bg:#F3F4FA;
 $main-bg:#FFFFFF;
-$blue:cadetblue;
+$main-color:cadetblue;
+$text-color:#151515;
+$blue:turquoise;
+$orange:orange;
 $white:#f2f2fa;
 $black:#151515;
+$green:greenyellow;
+$red:mediumvioletred;
 
-$sidebar-width:262px;
-$sidebar-logo-height:85px;
-
-$spacing:48px;
-$mobile-spacing:24px;
+$font-family: "Gill Sans", sans-serif;
 
 $font-size-normal:1rem;
 $font-size-medium:1.2rem;
 $font-size-large:1.5rem;
 
-$mobile-width: 600px;
-$tablet-width: 1024px;
+$sidebar-width:384px;
+$sidebar-logo-height:171px;
 
-$border-radius:50%;
+$spacing:48px;
+$mobile-spacing:24px;
+$border-radius:30px;
+
+
+$mobile-width: 600px;
+$tablet-width: 1366px;

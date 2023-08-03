@@ -1,5 +1,6 @@
 @import './abstracts/_variables';
 @import './abstracts/_mixins';
+
 *{
   margin:0;
   padding:0;
@@ -11,7 +12,12 @@ html{
 }
 
 body{
+  font-family: $font-family;
+  color:$text-color;
   box-sizing: border-box;
+  line-height: 1.5;
+  background-color: $body-bg;
+  overflow-x: hidden;
 }
 
 a{
@@ -24,7 +30,7 @@ img{
 }
 
 ul, li{
-  list-style: none;
+  list-style-type: none;
 }
 
 .mb{
@@ -33,4 +39,18 @@ ul, li{
   @include tablet{
     margin-bottom:$mobile-spacing;
   }
+}
+
+.title{
+  font-size: $font-size-medium;
+  font-weight: 700;
+}
+
+
+.text__success{
+  color: $green;
+}
+
+.text__danger{
+  color:$red;
 }
