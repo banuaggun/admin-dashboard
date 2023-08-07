@@ -2,10 +2,11 @@
 @import '../../scss/abstracts/_mixins';
 
 .summary__stats{
-  @include flex(stretch, flex-start);
+  @include flex(center, flex-start);
 
   &__chart{
     width:40%;
+    margin-left: 10px;
 
     
     &__value{
@@ -23,10 +24,12 @@
       font-size:$font-size-medium;
       font-weight:700;
       line-height:1.2;
+      width:max-content;
 
       span{
         font-size:13px;
         font-weight: 400;
+     
       }
     }
 

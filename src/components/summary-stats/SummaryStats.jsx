@@ -46,10 +46,9 @@ const SummaryStats = ({ item }) => {
                         value={item.percent}
                         strokeWidth={10}
                         styles={buildStyles({
-                            pathColor:
-                              item.percent < 50 ? '#ff0000' : '#00ff00',
-                              trailColor: "#dcdcdc",
-                              strokeLinecap: "round",
+                            pathColor:  item.percent < 50 ? colors.red : colors.purple,
+                            trailColor: "transparent",
+                            strokeLinecap: "round",
                         })}
                         className="summary__stats__chart__area"
                     >

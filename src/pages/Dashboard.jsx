@@ -10,7 +10,7 @@ const Dashboard = () => {
     <DashboardWrapper>
       <DashboardWrapperMain>
         <div className="row">
-          <div className="col-8 col-md-12">
+          <div className="col-12 col-md-12">
             <div className="row">
             {
               data.summary.map((item, index) => (

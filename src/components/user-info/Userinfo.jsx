@@ -11,9 +11,6 @@ const Userinfo = ({user}) => {
       <div className="user__info__name">
         <span>{user.name}</span>
       </div>
-      <div className="user__info__icon">
-        <span>{user.icon}</span>
-      </div>
     </div>
   )
 }
