@@ -63,3 +63,22 @@ const SummaryStats = ({ item }) => {
 };
 
 export default SummaryStats;
+
+
+export const SummaryStatsSpecial = ({item}) => {
+    return(
+        <Stats blue fullHeight>
+            <div className="summary__stats__special">
+                <div className="summary__stats__special__title">
+                    {item.title}
+                </div>
+                <div className="summary__stats__special__value">
+                    {item.value}
+                </div>
+                <div className="summary__stats__special__chart">
+                    
+                </div>
+            </div>
+        </Stats>
+    )
+}

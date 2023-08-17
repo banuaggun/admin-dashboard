@@ -1,7 +1,7 @@
 import React from 'react';
 import DashboardWrapper, { DashboardWrapperMain, DashboardWrapperRight } from '../components/dashboard-wrapper/DashboardWrapper';
 import Stats from '../components/stats/Stats';
-import SummaryStats from '../components/summary-stats/SummaryStats';
+import SummaryStats, { SummaryStatsSpecial } from '../components/summary-stats/SummaryStats';
 import data from '../constants/data';
 //import {data} from '../../public/constants/data';
 
@@ -10,7 +10,7 @@ const Dashboard = () => {
     <DashboardWrapper>
       <DashboardWrapperMain>
         <div className="row">
-          <div className="col-12 col-md-12">
+          <div className="col-8 col-md-12">
             <div className="row">
             {
               data.summary.map((item, index) => (
@@ -20,6 +20,9 @@ const Dashboard = () => {
               ))
             }
             </div>
+          </div>
+          <div className="col-4 hide-md">
+            <SummaryStatsSpecial item={data.revenueSummary}/>
           </div>
         </div>
       </DashboardWrapperMain>

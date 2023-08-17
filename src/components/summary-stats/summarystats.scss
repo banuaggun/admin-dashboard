@@ -42,3 +42,19 @@
 
   
 }
+
+.summary__stats__special{
+  @include flex(center, space-between);
+  flex-direction: column;
+  height: 100%;
+
+  &__title{
+    font-weight: 700;
+    font-size:$font-size-medium;
+  }
+
+  &__value{
+    font-weight: 700;
+    font-size: $font-size-large;
+  }
+}
