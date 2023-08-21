@@ -66,6 +66,40 @@ export default SummaryStats;
 
 
 export const SummaryStatsSpecial = ({item}) => {
+
+    const chartOptions = {
+        responsive:true,
+        scales:{
+            xAxis:{
+                display:false
+            },
+            yAxis:{
+                display:false
+            }
+        },
+        plugins:{
+            legend:{
+                display:false
+            }
+        },
+        elements:{
+            point:{
+                radius:0
+            }
+        }
+    }
+
+    const chartData = {
+        labels: item.chartData.labels,
+        datasets:[
+            {
+                label:'Revenue',
+                data:item.chartData.data,
+                borderColor:'#fff',
+                tension:0.5
+            }
+        ]
+    }
     return(
         <Stats blue fullHeight>
             <div className="summary__stats__special">
@@ -76,7 +110,7 @@ export const SummaryStatsSpecial = ({item}) => {
                     {item.value}
                 </div>
                 <div className="summary__stats__special__chart">
-                    
+                    <Line options={chartOptions} data={chartData} width={`250px`} />
                 </div>
             </div>
         </Stats>
