@@ -17,6 +17,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import OverallList from '../components/overall-list/OverallList';
 
 ChartJS.register(
   CategoryScale,
@@ -57,7 +58,15 @@ const Dashboard = () => {
         </div>
       </DashboardWrapperMain>
       <DashboardWrapperRight>
-        righ
+        <div className="title mb">
+          Overall
+        </div>
+        <div className="mb">
+            <OverallList/>
+        </div>
+        <div className="title mb">
+          Revenue By Channel
+        </div>
       </DashboardWrapperRight>
     </DashboardWrapper>
   )
