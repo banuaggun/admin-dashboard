@@ -79,18 +79,28 @@ const RevenueByMonthsChart = () => {
     resposive:true,
     maintainAspectRatio:false,
     scales:{
-      xAxes:{
-        grid:{
+      xAxes:[
+        {
+          grid:{
+            display:false,
+            drawBorder:false
+          }
+        },
+        {
+          stacked:false
+        }
+      ],
+      yAxes:[
+        {
+          grid:{
           display:false,
           drawBorder:false
+          }
+        },
+        {
+          stacked:false
         }
-      },
-      yAxes:{
-        grid:{
-          display:false,
-          drawBorder:false
-        }
-      }
+      ]
     },
     plugins:{
       legend:{

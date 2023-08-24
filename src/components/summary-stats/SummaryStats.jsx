@@ -70,12 +70,26 @@ export const SummaryStatsSpecial = ({item}) => {
     const chartOptions = {
         responsive:true,
         scales:{
-            xAxis:{
-                display:false
-            },
-            yAxis:{
-                display:false
-            }
+            xAxis:[
+                {
+                    ticks:{
+                        display:false
+                    }
+                },
+                {
+                    grid:{
+                        display:false
+                    }
+                },
+                {
+                    stacked:false
+                }
+            ],
+            yAxis:[
+                {
+                    stacked:false
+                }
+            ],
         },
         plugins:{
             legend:{
