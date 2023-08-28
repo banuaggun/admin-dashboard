@@ -69,15 +69,16 @@ export const SummaryStatsSpecial = ({item}) => {
 
     const chartOptions = {
         responsive:true,
+        options:{
         scales:{
-            xAxis:[
+            x:[
                 {
                     ticks:{
                         display:false
                     }
                 },
                 {
-                    grid:{
+                    gridLines:{
                         display:false
                     }
                 },
@@ -85,11 +86,12 @@ export const SummaryStatsSpecial = ({item}) => {
                     stacked:false
                 }
             ],
-            yAxis:[
+            y:[
                 {
                     stacked:false
                 }
             ],
+        }
         },
         plugins:{
             legend:{

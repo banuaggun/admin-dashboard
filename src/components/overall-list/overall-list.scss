@@ -4,7 +4,7 @@
 
 .overall__list{
   & > * ~ *{
-    margin-top: math.div(spacing, 2);
+    margin-top: math.div($spacing, 2);
   }
   &__item{
     @include flex(center, flex-start);

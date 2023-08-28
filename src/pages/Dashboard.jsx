@@ -18,6 +18,7 @@ import {
   Legend,
 } from "chart.js";
 import OverallList from '../components/overall-list/OverallList';
+import RevenueList from '../components/revenue-list/RevenueList';
 
 ChartJS.register(
   CategoryScale,
@@ -67,6 +68,9 @@ const Dashboard = () => {
         <div className="title mb">
           Revenue By Channel
         </div>
+        <div className="mb">
+          <RevenueList/>
+        </div>
       </DashboardWrapperRight>
     </DashboardWrapper>
   )
@@ -78,30 +82,37 @@ const RevenueByMonthsChart = () => {
   const chartOptions = {
     resposive:true,
     maintainAspectRatio:false,
+    options:{
     scales:{
-      xAxes:[
+      x:[
         {
+          gridLineWidth: 0,
           grid:{
-            display:false,
-            drawBorder:false
+            display: true,
+            zeroLineColor:'white',
+            color:'transparent'
           }
         },
         {
           stacked:false
         }
       ],
-      yAxes:[
+      y:[
         {
-          grid:{
-          display:false,
-          drawBorder:false
+          gridLineWidth:0,
+          gridLines:{
+            gridLineWidth:0,
+            display: true,
+            zeroLineColor:'white',
+            color:'transparent'
           }
         },
         {
           stacked:false
         }
       ]
-    },
+    }
+  },
     plugins:{
       legend:{
         display:false
