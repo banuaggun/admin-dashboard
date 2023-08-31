@@ -14,7 +14,7 @@
   z-index:100;
 
   @include tablet{
-    width:10vw;
+    width:100vw;
     background-color: $main-color;
     color:$white;
     z-index:1;
@@ -57,7 +57,7 @@
       @include flex(center, flex-start);
       position: relative;
       margin-bottom: 2rem;
-      padding-left: 10%;
+      padding-left: 20%;
       transition: color 0.3s ease-in-out;
 
       @include tablet {

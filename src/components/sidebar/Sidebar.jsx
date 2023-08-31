@@ -21,6 +21,7 @@ const Sidebar = () => {
     setTimeout(() => {
       document.body.classList.remove('.sidebar__open')
       document.querySelector('.main__content').style = ''
+      return () => clearTimeout();
     }, 500); 
   }
   return (
