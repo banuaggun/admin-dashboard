@@ -16,13 +16,18 @@ const Sidebar = () => {
     setActiveIndex(curPath.length === 0 ? 0 : activeIndex)
   }, [location])
   
+  
   const closeSidebar = () => {
     document.querySelector('.main__content').style.transform = 'scale(1) translateX(0)';
-    setTimeout(() => {
-      document.body.classList.remove('.sidebar__open')
-      document.querySelector('.main__content').style = ''
-      return () => clearTimeout();
-    }, 500); 
+    useEffect(() => {
+      let timer = setTimeout(() => {
+        document.body.classList.remove('.sidebar__open')
+        document.querySelector('.main__content').style = ''
+        return () => clearTimeout(timer);
+      }, 500); 
+    }, [])
+   
+    
   }
   return (
     <div className="sidebar">
