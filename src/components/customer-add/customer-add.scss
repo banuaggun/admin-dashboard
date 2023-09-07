@@ -1,0 +1,35 @@
+@use 'sass:math';
+@import '../../scss/abstracts/_variables';
+@import '../../scss/abstracts/_mixins';
+
+.customer__add__form{
+  form{
+    display:flex;
+    @include flex(flex-start, space-between);
+  }
+  position: relative;
+  height:auto;
+  border:1px solid green;
+
+  &__user__info{
+    width:50%;
+    border:1px solid blue;
+  
+    label{
+      font-size: $font-size-medium;
+    }
+
+    input{
+      width:calc(100% - 20px);
+      height:44px;
+      margin:0 20px 0 0px;
+      border:1px solid red;
+    }
+  }
+
+  &__user__products{
+    width:50%;
+    border:1px solid purple;
+  }
+}
+

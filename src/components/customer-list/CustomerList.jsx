@@ -21,7 +21,7 @@ const CustomerList = () => {
         </thead>
         <tbody>
           <tr>
-            <Link to='customers/add'>Add New Customer</Link>
+            <Link to='/customers/add' relative="path">Add New Customer</Link>
           </tr>
           {List.filter((item) => {
             return search.toLowerCase() === '' ? item : item.name.toLowerCase().includes(search);
