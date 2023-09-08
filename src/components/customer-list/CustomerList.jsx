@@ -3,20 +3,23 @@ import { Link } from 'react-router-dom';
 
 import List from '../../assets/data/List.json'
 
+import './customer-list.scss'
+
 const CustomerList = () => {
   const [search, setSearch] = useState('');
   return (
     <>
-     <div>
-        <input type="search" placeholder="search..."   onChange={(e) => setSearch(e.target.value)} />
+    <div className='customer__list'>
+     <div className='customer__list__search'>
+        <input type="search" placeholder="search..." onChange={(e) => setSearch(e.target.value)} />
       </div>
       <table>
         <thead>
           <tr>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Phone</td>
-            <td>Location</td>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Location</th>
           </tr>
         </thead>
         <tbody>
@@ -40,6 +43,7 @@ const CustomerList = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </>
   )
 }
