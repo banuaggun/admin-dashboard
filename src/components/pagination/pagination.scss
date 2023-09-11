@@ -1,0 +1,12 @@
+@use 'sass:math';
+@import '../../scss/abstracts/_variables';
+@import '../../scss/abstracts/_mixins';
+
+.pagination{
+  margin:10px;
+
+  &__container{
+    @include flex(flex-start, center);
+    border:1px solid purple;
+  }
+}
