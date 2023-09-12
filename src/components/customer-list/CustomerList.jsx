@@ -78,9 +78,15 @@ const CustomerList = () => {
                                     <td>{item.location}</td>
                                     <td>{item.phone}</td>
                                     <td>
-                                        <button>Details</button>
-                                        <button>Edit</button>
-                                        <button>Delete</button>
+                                        <button>
+                                            <i className="ph-thin ph-dots-three"></i>
+                                        </button>
+                                        <button>
+                                            <i className="ph-thin ph-pencil-line"></i>
+                                        </button>
+                                        <button>
+                                            <i className="ph-thin ph-trash"></i>
+                                        </button>
                                     </td>
                                 </tr>
                             ))}

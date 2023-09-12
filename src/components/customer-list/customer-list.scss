@@ -18,13 +18,33 @@
     
   }
   table{
-    width:100%;
+    margin:0 150px;
+    width:calc(100% - 300px);
     border:1px solid purple;
     margin-top:$mobile-spacing;
-    padding:20px;
-    tbody > tr > td{
-      border:1px solid green;
-      padding:$mobile-spacing;
+    padding:10px;
+    tbody{
+      white-space: nowrap;
+
+      tr{
+        td{
+          border:1px solid green;
+          padding:12px 6px;
+          button{
+            --size:32px;
+            width:var(--size);
+            height:var(--size);
+            border-radius:50%;
+            margin:0 20px;
+            border:1px solid red;
+            i{
+              font-size:1.2rem;
+            }
+          }
+        }
+      } 
     }
+     
+    
   }
 }

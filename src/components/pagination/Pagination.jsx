@@ -7,8 +7,7 @@ const Pagination = ({ page, pages, onClick, prevHandler, nextHandler }) => {
     <div className="pagination">
       <ul className="pagination__container">
         <li className="pagination__container__item" onClick={prevHandler}>
-          {" "}
-          Prev{" "}
+          <i className="ph-thin ph-caret-left"></i>
         </li>
         {[...Array(Math.ceil(pages)).keys()].map((x, i) => {
           return (
@@ -27,7 +26,7 @@ const Pagination = ({ page, pages, onClick, prevHandler, nextHandler }) => {
           );
         })}
         <li className="pagination__container__item" onClick={nextHandler}>
-          Next
+          <i className="ph-thin ph-caret-right"></i>
         </li>
       </ul>
     </div>

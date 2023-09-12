@@ -8,5 +8,23 @@
   &__container{
     @include flex(flex-start, center);
     border:1px solid purple;
+
+    &__item{
+      --size:40px;
+      width:var(--size);
+      height:var(--size);
+      @include flex(center, center);
+      margin:0 10px;
+      border-radius: $border-radius;
+      border:1px solid black;
+
+      i{
+        font-size:1.5rem;
+      }
+
+      @include tablet{
+        margin:0 5px;
+      }
+    }
   }
 }
