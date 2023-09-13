@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import List from "../../assets/data/List.json";
 import Pagination from "../pagination/Pagination";
@@ -8,6 +8,9 @@ import "./customer-list.scss";
 
 const CustomerList = () => {
     const [search, setSearch] = useState("");
+
+    const [customerData, customerDataChange] = useState(null);
+    const navigate = useNavigate();
 
     /* ---- Pagination ----- */ 
     const pageSize = 6;
@@ -52,16 +55,21 @@ const CustomerList = () => {
                 </div>
                 <div className="customer__list__add">
                     <Link to="/customers/add" relative="path">
-                        Add New Customer
+                        <button>
+                            <span>
+                                <i className="ph-thin ph-plus-circle"> Add New Customer</i>
+                            </span>
+                        </button>
                     </Link>
                 </div>
                 <table>
+                    <caption>Customers</caption>
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Location</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Location</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -73,10 +81,10 @@ const CustomerList = () => {
                             })
                             .map((item, index) => (
                                 <tr key={index}>
-                                    <td>{item.name}</td>
-                                    <td>{item.email}</td>
-                                    <td>{item.location}</td>
-                                    <td>{item.phone}</td>
+                                    <td data-label="Name" scope="row">{item.name}</td>
+                                    <td data-label="Email">{item.email}</td>
+                                    <td data-label="Location">{item.location}</td>
+                                    <td data-label="Phone">{item.phone}</td>
                                     <td>
                                         <button>
                                             <i className="ph-thin ph-dots-three"></i>

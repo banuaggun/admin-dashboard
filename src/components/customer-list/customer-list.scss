@@ -17,19 +17,55 @@
     }
     
   }
+  &__add{
+    width:100%;
+    border:1px solid green;
+    button{
+      width:max-content;
+      padding:10px 20px;
+      border-radius:24px;
+      margin-left:40px;
+      display: flex;
+      @include flex(center, center);
+      transition:all 0.2s ease;
+      cursor:pointer;
+      span{
+        font-size:1.2rem;
+
+        i{
+          font-size:1.5rem;
+        }
+      }
+    }
+  }
   table{
-    margin:0 150px;
-    width:calc(100% - 300px);
+    width:100%;
+    table-layout: fixed;
+    border-collapse: collapse;
     border:1px solid purple;
     margin-top:$mobile-spacing;
-    padding:10px;
+    
+    caption{
+      font-size:1.5em;
+      margin:0.5em 0 0.75em;
+    }
     tbody{
-      white-space: nowrap;
-
       tr{
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: 0.35em;
+        
+        th{
+          font-size: 0.85em;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+          padding: 0.625em;
+          text-align: center;
+        }
         td{
-          border:1px solid green;
-          padding:12px 6px;
+          padding: 0.625em;
+          text-align: center;
+        
           button{
             --size:32px;
             width:var(--size);
@@ -44,7 +80,51 @@
         }
       } 
     }
-     
+   
+    @include mobile{
+      table{
+        border:0;
+
+        caption{
+          font-size:1.3em;
+        }
+
+        thead{
+          border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+        }
+
+        tr{
+          border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+
+    td{
+      border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+
+    &::before{
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &:last-child{
+      border-bottom:0;
+    }
+    }
+        }
+      }
+    }
     
   }
 }
