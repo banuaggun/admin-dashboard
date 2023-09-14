@@ -20,6 +20,8 @@ const CustomerAdd = () => {
   }
   return (
     <>
+    <div className="modal-container">
+    <div className="modal">
       <div className='customer__add__form'>
         <form onSubmit={handleSubmit}>
           <fieldset className='customer__add__form__user__info'>
@@ -51,6 +53,8 @@ const CustomerAdd = () => {
             <button>Submit</button>
           </div>
         </form>
+      </div>
+      </div>
       </div>
     </>
   )

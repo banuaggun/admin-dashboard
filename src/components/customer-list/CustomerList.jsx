@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import List from "../../assets/data/List.json";
+import CustomerAdd from "../customer-add/CustomerAdd";
 import Pagination from "../pagination/Pagination";
 
 import "./customer-list.scss";
@@ -9,6 +10,7 @@ import "./customer-list.scss";
 const CustomerList = () => {
     const [search, setSearch] = useState("");
 
+    const [modalOpen, setModalOpen] = useState(false);
     const [customerData, customerDataChange] = useState(null);
     const navigate = useNavigate();
 
@@ -54,6 +56,7 @@ const CustomerList = () => {
                     />
                 </div>
                 <div className="customer__list__add">
+                    {/*
                     <Link to="/customers/add" relative="path">
                         <button>
                             <span>
@@ -61,6 +64,13 @@ const CustomerList = () => {
                             </span>
                         </button>
                     </Link>
+    */}
+    {modalOpen && <CustomerAdd/>}
+    <button onClick={() => setModalOpen(true)}>
+                            <span>
+                                <i className="ph-thin ph-plus-circle"> Add New Customer</i>
+                            </span>
+                        </button>
                 </div>
                 <table>
                     <caption>Customers</caption>
