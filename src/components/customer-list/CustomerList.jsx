@@ -51,8 +51,9 @@ const CustomerList = () => {
                 <div className="customer__list__search">
                     <input
                         type="search"
-                        placeholder="search..."
+                        placeholder="Search Customer..."
                         onChange={(e) => setSearch(e.target.value)}
+                        className="customer__list__search__input"
                     />
                 </div>
                 <div className="customer__list__add">
@@ -76,10 +77,10 @@ const CustomerList = () => {
                     <caption>Customers</caption>
                     <thead>
                         <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Phone</th>
-                            <th scope="col">Location</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Location</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -91,10 +92,10 @@ const CustomerList = () => {
                             })
                             .map((item, index) => (
                                 <tr key={index}>
-                                    <td data-label="Name" scope="row">{item.name}</td>
-                                    <td data-label="Email">{item.email}</td>
-                                    <td data-label="Location">{item.location}</td>
-                                    <td data-label="Phone">{item.phone}</td>
+                                    <td>{item.name}</td>
+                                    <td>{item.email}</td>
+                                    <td>{item.location}</td>
+                                    <td>{item.phone}</td>
                                     <td>
                                         <button>
                                             <i className="ph-thin ph-dots-three"></i>

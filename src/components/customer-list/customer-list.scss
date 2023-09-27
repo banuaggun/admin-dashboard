@@ -3,128 +3,28 @@
 @import '../../scss/abstracts/_mixins';
 
 .customer__list{
-  border:1px solid green;
+  display:flex;
+  flex-direction: column;
   &__search{
-    border:1px solid blue;
-    padding:$spacing;
-
-    input{
-      outline:none;
-      width:100%;
-      height:44px;
-      padding:10px;
-      border:2px solid lightsteelblue;
-    }
-    
-  }
-  &__add{
     width:100%;
-    border:1px solid green;
-    button{
-      width:max-content;
-      padding:10px 20px;
-      border-radius:24px;
-      margin-left:40px;
-      display: flex;
-      @include flex(center, center);
-      transition:all 0.2s ease;
-      cursor:pointer;
-      span{
-        font-size:1.2rem;
+    border:2px solid #dcdcdc;
+    overflow:auto;
+    border-radius:5px;
+    -moz-border-radius: 5px;
+	  -webkit-border-radius: 5px;
 
-        i{
-          font-size:1.5rem;
-        }
+    input[type="search"]{
+      border: 0px;
+	    width: 100%;
+	    padding: 10px 10px;
+      &:focus{
+        outline:0;
       }
     }
-  }
-  table{
-    width:100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    border:1px solid purple;
-    margin-top:$mobile-spacing;
-    
-    caption{
-      font-size:1.5em;
-      margin:0.5em 0 0.75em;
-    }
-    tbody{
-      tr{
-        background-color: #f8f8f8;
-        border: 1px solid #ddd;
-        padding: 0.35em;
-        
-        th{
-          font-size: 0.85em;
-          letter-spacing: .1em;
-          text-transform: uppercase;
-          padding: 0.625em;
-          text-align: center;
-        }
-        td{
-          padding: 0.625em;
-          text-align: center;
-        
-          button{
-            --size:32px;
-            width:var(--size);
-            height:var(--size);
-            border-radius:50%;
-            margin:0 20px;
-            border:1px solid red;
-            i{
-              font-size:1.2rem;
-            }
-          }
-        }
-      } 
-    }
-   
+
     @include mobile{
-      table{
-        border:0;
-
-        caption{
-          font-size:1.3em;
-        }
-
-        thead{
-          border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-        }
-
-        tr{
-          border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: .625em;
-
-    td{
-      border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: .8em;
-    text-align: right;
-
-    &::before{
-      content: attr(data-label);
-      float: left;
-      font-weight: bold;
-      text-transform: uppercase;
+      width:95%;
+      margin:0 auto;
     }
-
-    &:last-child{
-      border-bottom:0;
-    }
-    }
-        }
-      }
-    }
-    
   }
 }
