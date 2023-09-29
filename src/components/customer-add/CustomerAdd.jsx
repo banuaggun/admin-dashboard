@@ -1,63 +1,51 @@
 import React from 'react'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 import './customer-add.scss'
 
 const CustomerAdd = () => {
-
-  const [id, idChange] = useState("");
-  const [name, nameChange] = useState("");
-  const[email, emailChange]=useState("");
-  const[phone, phoneChange]=useState("");
-  const[validation, validationChange]=useState(false);
-
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.prevent.default();
-    const contacts = {name, email, phone};
-  }
   return (
-    <>
-    <div className="modal-container">
-    <div className="modal">
-      <div className='customer__add__form'>
-        <form onSubmit={handleSubmit}>
-          <fieldset className='customer__add__form__user__info'>
-            <h2>New User Info</h2>
-          <div>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required/>
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required/>
-          </div>
-          <div>
-            <label for="phone">Phone</label>
-            <input type="number" name="phone" id="phone" required/>
-          </div>
-          </fieldset>
-          <fieldset className='customer__add__form__user__products'>
+    <div className='customer__add'>
+      <h2>Add New User</h2>
+      <form className='customer__add__form'>
+        <div className="customer__add__form__info">
+
+          <div className='customer__add__form__info__personal'>
             <div>
-              <label for="spend">Spend</label>
-              <input type="number" name="spend" id="spend"/>
+              <label htmlFor='name'>Name</label>
+              <input type="text" name="name" id="name" required/>
             </div>
             <div>
-              <label for="order">Order</label>
-              <input type="number" name="order" id="order"/>
+              <label htmlFor='email'>Email</label>
+              <input type="text" name="email" id="email" required/>
             </div>
-          </fieldset>
-          <div>
-            <button>Submit</button>
+            <div>
+              <label htmlFor='phone'>Phone</label>
+              <input type="text" name="phone" id="phone" required/>
+            </div>
           </div>
-        </form>
-      </div>
-      </div>
-      </div>
-    </>
+
+          <div className='customer__add__form__info__payment'>
+            <div>
+              <label htmlFor='order'>Order</label>
+              <input type="text" name="order" id="order" />
+            </div>
+            <div>
+              <label htmlFor='spend'>Spend</label>
+              <input type="text" name="spend" id="spend" />
+            </div>
+          </div>
+        </div>
+        
+        
+        <div>
+          <button type="submit">Add</button>
+          <Link to="/customers" relative="path">Back</Link>
+        </div>
+      </form>
+    </div>
   )
 }
+
 
 export default CustomerAdd

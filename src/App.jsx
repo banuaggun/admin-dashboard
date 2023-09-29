@@ -6,6 +6,8 @@ import Layout from './layout/Layout'
 import Dashboard from './pages/Dashboard'
 import Customers from './pages/Customers'
 import CustomerAdd from './components/customer-add/CustomerAdd'
+import CustomerUpdate from './components/customer-update/CustomerUpdate'
+import CustomerRead from './components/customer-read/CustomerRead'
 
 function App() {
 
@@ -15,7 +17,9 @@ function App() {
         <Route path="/" element={<Layout/>}>
           <Route index element={<Dashboard/>}/>
           <Route path="customers" element={<Customers/>}/>
+          <Route oath="customers/read/:id" element={<CustomerRead/>}/>
           <Route path="customers/add" element={<CustomerAdd/>}/>
+          <Route path="customers/update/:id" element={<CustomerUpdate/>}/>
           <Route path="products" element={<Blank/>}/>
           <Route path="stats" element={<Blank/>}/>
           <Route oath="settings" element={<Blank/>}/>
