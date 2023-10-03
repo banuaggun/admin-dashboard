@@ -4,9 +4,12 @@
 
 .customer__add{
   border:1px solid green;
+  padding:0 80px;
   h2{
     text-align: left;
     margin:20px auto;
+    text-transform: uppercase;
+    color:$text-color;
   }
 
   &__form{
@@ -21,13 +24,12 @@
       font-weight: 600;
       text-transform: uppercase;
       color:#888;
-      border:1px solid teal;
     }
 
     input{
-      width:90%;
-      height:36px;
-      margin:10px;
+      width:calc(100% - 120px);
+      height:44px;
+      margin:15px 10px;
       border-radius: 8px;
       border:3px solid darkgray;
     }
@@ -41,12 +43,36 @@
        flex-direction: column;
        width:100%;
        max-width:50%;
-       border:1px solid hotpink;
      }
      &__payment{
        width:100%;
        max-width:50%;
-       border:1px solid gold;
+     }
+   }
+   &__buttons{
+     width:100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin:20px auto;
+
+     button:nth-child(1){
+       margin-right:20px;
+       background-color: $green;
+     }
+     button:nth-child(2){
+       background-color:lightgray;
+     }
+     button,
+     a,
+     Link{
+       width:25%;
+       height:52px;
+       border:none;
+       outline:none;
+       border-radius:20px;
+       font-size:1.5rem;
+       font-weight:700;
      }
    }
   }
