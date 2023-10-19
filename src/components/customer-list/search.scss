@@ -1,0 +1,42 @@
+@use 'sass:math';
+@import '../../scss/abstracts/_variables';
+@import '../../scss/abstracts/_mixins';
+
+.customerList{
+  &__search{
+    width:100%;
+    height:32px;
+    display: flex;
+    align-items: center;
+
+    i{
+      font-size:1.5rem;
+      color:rgb(45, 60, 88);
+      position:absolute;
+      left:30px;
+    }
+    input{
+      width:80%;
+      height:32px;
+      border:none;
+      outline:none;
+      padding-left:36px;
+      background-color: white;
+      border-width:0.5px 0.5px 3px 0.5px;
+      border-style: solid;
+      border-color: #dcdcdc #dcdcdc cornflowerblue #dcdcdc;
+      &::-webkit-search-cancel-button{
+        position:absolute;
+        right:20px;
+        font-size:1.5rem;
+        &:hover{
+          cursor:pointer;
+        }
+        &.active{
+          cursor:pointer;
+        }
+      }
+
+    }
+  }
+}

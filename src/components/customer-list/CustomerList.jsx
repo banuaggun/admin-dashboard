@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import List from "../../assets/data/List.json";
 import Pagination from "../pagination/Pagination";
 
-import "./customer-list.scss";
+import "./customerlist.scss";
+import "./search.scss";
 
 const CustomerList = () => {
     const [search, setSearch] = useState("");
@@ -43,13 +44,13 @@ const CustomerList = () => {
 
     return (
         <>
-            <div className="customer__list">
-                <div className="customer__list__search">
+            <div className="customerList">
+                <div className="customerList__search">
+                    <i className="ph-thin ph-magnifying-glass"></i>
                     <input
                         type="search"
                         placeholder="Search Customer..."
                         onChange={(e) => setSearch(e.target.value)}
-                        className="customer__list__search__input"
                     />
                 </div>
                 <div className="customer__list__add">
