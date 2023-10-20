@@ -45,24 +45,29 @@ const CustomerList = () => {
     return (
         <>
             <div className="customerList">
-                <div className="customerList__search">
-                    <i className="ph-thin ph-magnifying-glass"></i>
-                    <input
-                        type="search"
-                        placeholder="Search Customer..."
-                        onChange={(e) => setSearch(e.target.value)}
-                    />
-                </div>
-                <div className="customer__list__add">
+                <div className="customerList__area">
+                    <div className="customerList__area__search">
+                        <i className="ph-thin ph-magnifying-glass"></i>
+                        <input
+                            type="search"
+                            placeholder="Search Customer..."
+                            onChange={(e) => setSearch(e.target.value)}
+                        />
+                    </div>
+                    <div className="customerList__area__add">
                     <Link to="/customers/add" relative="path">
                         <button>
+                            <i className="ph-thin ph-plus-circle"></i>
                             <span>
-                                <i className="ph-thin ph-plus-circle"> Add New Customer</i>
+                                Add New Customer
                             </span>
                         </button>
                     </Link>
     
                 </div>
+                </div>
+                
+                
                 <table>
                     <caption>Customers</caption>
                     <thead>
