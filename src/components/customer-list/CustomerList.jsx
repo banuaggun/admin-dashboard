@@ -12,7 +12,7 @@ const CustomerList = () => {
 
 
     /* ---- Pagination ----- */ 
-    const pageSize = 6;
+    const pageSize = 5;
     const pageLength = List.length / pageSize;
     const [page, setPage] = useState(1);
     
@@ -92,7 +92,7 @@ const CustomerList = () => {
                                     <td>{item.email}</td>
                                     <td>{item.location}</td>
                                     <td>{item.phone}</td>
-                                    <td>
+                                    <td className="buttons">
                                         <button>
                                             <i className="ph-thin ph-dots-three"></i>
                                         </button>
