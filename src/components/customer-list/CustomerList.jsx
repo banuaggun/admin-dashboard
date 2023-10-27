@@ -94,7 +94,7 @@ const CustomerList = () => {
                                     <td>{item.phone}</td>
                                     <td className="buttons">
                                         <button>
-                                            <i className="ph-thin ph-dots-three"></i>
+                                            <i className="ph-thin ph-dots-three-outline"></i>
                                         </button>
                                         <button>
                                             <i className="ph-thin ph-pencil-line"></i>
