@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import List from "../../assets/data/List.json";
+import List from "../../assets/data/db.json";
 import Pagination from "../pagination/Pagination";
 
 import "./customerlist.scss";

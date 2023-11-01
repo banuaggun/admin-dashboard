@@ -1,4 +1,5 @@
-[
+{
+  "users": [
   {
     "id": 1,
     "name": "Brittan Rois",
@@ -450,3 +451,4 @@
     "totalOrders": 65533
   }
 ]
+}

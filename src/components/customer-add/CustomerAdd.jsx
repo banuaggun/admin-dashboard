@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import customer from '../../assets/data/List.json';
+import customer from '../../assets/data/db.json';
 import "./customer-add.scss";
 
 const CustomerAdd = () => {

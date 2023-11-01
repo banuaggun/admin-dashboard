@@ -22,7 +22,7 @@ function App() {
           <Route path="customers/update/:id" element={<CustomerUpdate/>}/>
           <Route path="products" element={<Blank/>}/>
           <Route path="stats" element={<Blank/>}/>
-          <Route oath="settings" element={<Blank/>}/>
+          <Route path="settings" element={<Blank/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
