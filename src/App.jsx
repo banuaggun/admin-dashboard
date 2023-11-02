@@ -17,7 +17,7 @@ function App() {
         <Route path="/" element={<Layout/>}>
           <Route index element={<Dashboard/>}/>
           <Route path="customers" element={<Customers/>}/>
-          <Route oath="customers/read/:id" element={<CustomerRead/>}/>
+          <Route path="customers/read/:id" element={<CustomerRead/>}/>
           <Route path="customers/add" element={<CustomerAdd/>}/>
           <Route path="customers/update/:id" element={<CustomerUpdate/>}/>
           <Route path="products" element={<Blank/>}/>

@@ -37,9 +37,9 @@ function CustomerList() {
                       <td>{d.email}</td>
                       <td>{d.location}</td>
                       <td className="buttons">
-                        <button>
+                        <Link to={`/customers/read/${d.id}`}>
                           <i className="ph-thin ph-dots-three-outline"></i>
-                        </button>
+                        </Link>
                         <button>
                           <i className="ph-thin ph-pencil-line"></i>
                         </button>
