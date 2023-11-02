@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 import axios from 'axios';
+import './customerlist.scss';
 
 function CustomerList() {
     const [data, setData] = useState([]);
@@ -11,15 +13,20 @@ function CustomerList() {
     }, []);
     return (
         <div>
+          <div className="toparea">
+            <div className="toparea__add">
+              <Link to="/customers/add">Add</Link>
+            </div>
+          </div>
             <table>
               <caption>Customer List</caption>
                 <thead>
                 <tr>
-                    <th>id</th>
+                    <th></th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
-                    <th>Location</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -29,7 +36,7 @@ function CustomerList() {
                       <td>{d.name}</td>
                       <td>{d.email}</td>
                       <td>{d.location}</td>
-                      <td>
+                      <td className="buttons">
                         <button>
                           <i className="ph-thin ph-dots-three-outline"></i>
                         </button>

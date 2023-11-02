@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
 import "./customer-add.scss";
 
 const CustomerAdd = () => {
@@ -12,17 +13,19 @@ const CustomerAdd = () => {
         order: "",
     });
 
+    const navigate = useNavigate();
+
     const handleSubmit = (event) => {
       event.preventDefault();
+      axios
+            .post("http://localhost:3000/users", values)
+            .then((res) => {
+                console.log(res);
+                navigate('/customers')
+            })
+            .catch((err) => console.log(err));
 
-      customerData.map((customer, index) => (
-        <tr key={index}>
-          <td>{customer.name}</td>
-        </tr>
-      ))
     }
-
-    const customerData=[];
     return (
         <div className="customer__add">
             <h2>Add New User</h2>
