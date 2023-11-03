@@ -449,6 +449,24 @@
       "phone": "+1 703 933 3296",
       "totalSpend": "$881050.42",
       "totalOrders": 65533
+    },
+    {
+      "name": "New User 1",
+      "email": "newuser@outlook.com",
+      "phone": "+424525865696",
+      "location": "Manhattan",
+      "spend": "$460.000",
+      "order": "$80.000",
+      "id": 51
+    },
+    {
+      "name": "New User 2",
+      "email": "new2@gmail.com",
+      "phone": "+85416532",
+      "location": "New York, Manhattan",
+      "spend": "$88.000",
+      "order": "$48.000",
+      "id": 52
     }
   ]
 }

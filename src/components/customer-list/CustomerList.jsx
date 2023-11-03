@@ -7,7 +7,7 @@ function CustomerList() {
     const [data, setData] = useState([]);
     useEffect(() => {
         axios
-            .get("http://localhost:3000/users")
+            .get(`http://localhost:3000/users`)
             .then((res) => setData(res.data))
             .catch((err) => console.log(err));
     }, []);
@@ -40,9 +40,9 @@ function CustomerList() {
                         <Link to={`/customers/read/${d.id}`}>
                           <i className="ph-thin ph-dots-three-outline"></i>
                         </Link>
-                        <button>
+                        <Link to={`/customers/update/${d.id}`}>
                           <i className="ph-thin ph-pencil-line"></i>
-                        </button>
+                        </Link>
                         <button>
                           <i className="ph-thin ph-trash"></i>
                         </button>
