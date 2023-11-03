@@ -32,7 +32,7 @@ function CustomerRead(){
                 <p key={`data.${id}`}>{data.totalSpend}</p>
                 <p key={`data.${id}`}>{data.totalOrders}</p>
             <p>
-                <Link to={`/update/${id}`}>Edit</Link>
+                <Link to={`/customers/update/${id}`}>Edit</Link>
                 <Link to="/customers" relative="path">Back</Link>
             </p>
         </div>
