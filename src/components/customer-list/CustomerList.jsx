@@ -1,54 +1,67 @@
 import { useState, useEffect } from "react";
-import {Link} from 'react-router-dom';
-import axios from 'axios';
-import './customerlist.scss';
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./customerlist.scss";
 
 function CustomerList() {
     const [data, setData] = useState([]);
+    const navigate = useNavigate();
     useEffect(() => {
         axios
             .get(`http://localhost:3000/users`)
             .then((res) => setData(res.data))
             .catch((err) => console.log(err));
     }, []);
+
+    const handleDelete = (id) => {
+        const confirm = window.confirm("Would you like to Delete User?");
+        if (confirm) {
+            axios
+                .delete(`http://localhost:3000/users/${id}`)
+                .then((res) => {
+                    location.reload();
+                })
+                .catch((err) => console.log(err));
+        }
+    };
     return (
         <div>
-          <div className="toparea">
-            <div className="toparea__add">
-              <Link to="/customers/add">Add</Link>
+            <div className="toparea">
+                <div className="toparea__add">
+                    <Link to="/customers/add">Add</Link>
+                </div>
             </div>
-          </div>
             <table>
-              <caption>Customer List</caption>
+                <caption>Customer List</caption>
                 <thead>
-                <tr>
-                    <th></th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th></th>
-                </tr>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody>
-                  {data.map((d, i) => (
-                    <tr key={i}>
-                      <td>{d.id}</td>
-                      <td>{d.name}</td>
-                      <td>{d.email}</td>
-                      <td>{d.location}</td>
-                      <td className="buttons">
-                        <Link to={`/customers/read/${d.id}`}>
-                          <i className="ph-thin ph-dots-three-outline"></i>
-                        </Link>
-                        <Link to={`/customers/update/${d.id}`}>
-                          <i className="ph-thin ph-pencil-line"></i>
-                        </Link>
-                        <button>
-                          <i className="ph-thin ph-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
+                    {data.map((d, i) => (
+                        <tr key={i}>
+                            <td>{d.id}</td>
+                            <td>{d.name}</td>
+                            <td>{d.email}</td>
+                            <td>{d.location}</td>
+                            <td className="buttons">
+                                <Link to={`/customers/read/${d.id}`}>
+                                    <i className="ph-thin ph-dots-three-outline"></i>
+                                </Link>
+                                <Link to={`/customers/update/${d.id}`}>
+                                    <i className="ph-thin ph-pencil-line"></i>
+                                </Link>
+                                <button onClick={(e) => handleDelete(d.id)}>
+                                    <i className="ph-thin ph-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>
