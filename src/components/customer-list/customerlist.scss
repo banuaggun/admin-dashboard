@@ -5,15 +5,39 @@
 .toparea{
   width:100%;
   height:auto;
-  padding:8px 0;
+  padding:8px 40px;
   border:1px solid red;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  &__search{
+    width:50%;
+    display:flex;
+    align-items: center;
+    i{
+      font-size:1.5rem;
+      color:#242424;
+      position:absolute;
+      left:75px;
+    }
+    input{
+      width:100%;
+      padding:8px 16px 8px 35px;
+      border-radius:8px;
+      border:2px solid lavender;
+      outline:none;
+      font-size:1rem;
+      background-color: floralwhite;
+      color:#242424;
+    }
+  }
   &__add{
+    width:50%;
+    display:flex;
+    justify-content: flex-end;
     a{
       padding:8px 16px;
-      border-radius:px;
+      border-radius:8px;
       border:none;
       outline:none;
       color:#242424;

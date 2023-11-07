@@ -5,7 +5,7 @@ import "./customerlist.scss";
 
 function CustomerList() {
     const [data, setData] = useState([]);
-    const navigate = useNavigate();
+    const [search, setSearch] = useState("");
     useEffect(() => {
         axios
             .get(`http://localhost:3000/users`)
@@ -27,6 +27,10 @@ function CustomerList() {
     return (
         <div>
             <div className="toparea">
+                <div className="toparea__search">
+                    <i className="ph-thin ph-magnifying-glass"></i>
+                    <input type="search" placeholder="Search..." onChange={(e) => setSearch(e.target.value)} />
+                </div>
                 <div className="toparea__add">
                     <Link to="/customers/add">Add</Link>
                 </div>
@@ -43,7 +47,11 @@ function CustomerList() {
                     </tr>
                 </thead>
                 <tbody>
-                    {data.map((d, i) => (
+                    {data.filter((d) => {
+                                return search.toLowerCase() === ""
+                                    ? d
+                                    : d.name.toLowerCase().includes(search);
+                            }).map((d, i) => (
                         <tr key={i}>
                             <td>{d.id}</td>
                             <td>{d.name}</td>
