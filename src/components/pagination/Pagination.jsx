@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import './pagination.scss';
 
-const Pagination = ({ page, pages, onClick, prevHandler, nextHandler }) => {
+const Pagination = ({ page, pageLength, onClick, prevHandler, nextHandler }) => {
   const [currentPage, setCurrentPage] = useState(page);
 
 
@@ -12,8 +12,8 @@ const Pagination = ({ page, pages, onClick, prevHandler, nextHandler }) => {
         <li className="pagination__container__item" onClick={prevHandler}>
           <i className="ph-thin ph-caret-left"></i>
         </li>
-        {[...Array(Math.ceil(pages)).keys()].map((x, i) => {
-          if (i === 0 || i === Math.ceil(pages) - 1 || (i >= currentPage - 2 && i <= currentPage + 2)) {
+        {[...Array(Math.ceil(pageLength)).keys()].map((x, i) => {
+          if (i === 0 || i === Math.ceil(pageLength) - 1 || (i >= currentPage - 2 && i <= currentPage + 2)) {
             return (
               <li
                 key={i}
@@ -43,7 +43,7 @@ const Pagination = ({ page, pages, onClick, prevHandler, nextHandler }) => {
                 {currentPage - 2}
               </li>
             );
-          } else if (i === currentPage + 2 && currentPage < pages - 3) {
+          } else if (i === currentPage + 2 && currentPage < pageLength - 3) {
             return (
               <li key={i} className="pagination__container__item">
                 {currentPage + 2}
