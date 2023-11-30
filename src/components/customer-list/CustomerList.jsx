@@ -6,7 +6,7 @@ import "./customerlist.scss";
 
 function CustomerList() {
     const [data, setData] = useState([]);
-    const [page, setPage] = useState(0);
+    const [page, setPage] = useState(1);
     const pageSize = 5;
     const pageLength = data.length / pageSize;
 
@@ -16,7 +16,6 @@ function CustomerList() {
             .get(`http://localhost:3000/users`)
             .then((res) => {
                 setData(res.data);
-                setPage(pageLength);
             })
             .catch((err) => console.log(err));
     }, []);
