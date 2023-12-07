@@ -5,6 +5,9 @@ const FetchData = () => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
+  
+    
+
   useEffect(() => {
     const fetchData = async () => {
       try{
@@ -21,6 +24,7 @@ const FetchData = () => {
   return{
     data, 
     loading,
+    
   };
 };
 
