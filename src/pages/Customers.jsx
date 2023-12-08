@@ -1,5 +1,4 @@
 import React from 'react'
-import CustomerList from '../components/customer-list/CustomerList'
 import CustomerTable from '../components/customer-list/CustomerTable'
 
 const Customers = () => {
